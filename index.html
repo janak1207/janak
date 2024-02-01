@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Special</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fce4ec;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    #page1 {
+      display: block;
+    }
+
+    #page2 {
+      display: none;
+    }
+
+    h1 {
+      color: #e91e63;
+    }
+
+    p {
+      margin: 20px;
+      font-size: 18px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="page1">
+    <h1>Happy Valentine's Day!</h1>
+    <p>Wishing you a day filled with love, laughter, and happiness. May your heart be full of joy on this special day.</p>
+    <button onclick="goToPage2()">Next</button>
+  </div>
+
+  <div id="page2">
+    <a href="index.html" id="back-link">&lt; Go Back</a>
+    <div id="video-container">
+      <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div id="overlay-text">Happy Valentine's Day!</div>
+    </div>
+  </div>
+
+  <script>
+    function goToPage2() {
+      document.getElementById('page1').style.display = 'none';
+      document.getElementById('page2').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
